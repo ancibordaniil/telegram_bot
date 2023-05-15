@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "ancibordaniil",
   "license": "ISC",
   "dependencies": {
     "node-telegram-bot-api": "^0.61.0",
