@@ -48,7 +48,8 @@ const mainFunction = () => {
             return await bot.sendMessage(chatId,
                 `Здравствуйте ${msg.from.username}, добро пожаловать в телеграмм бот ulvenn Bot.` + '\n' + '\n' +
                 "Команды:" + '\n' + "/info - Присылает всю доступную про вас информацию, которая хранится в базе данных"
-                + '\n' + "/command - Выдает все доступные команды и их функции"
+                + '\n' + "/command - Выдает все доступные команды и их функции" + '\n' +
+                '/numbers - Игра, в которой вам предстоит отгадать число от 0 до 9'
             )
         }
         if (text === "/info") {
@@ -61,12 +62,13 @@ const mainFunction = () => {
             return await bot.sendMessage(chatId,
                 "/start - Приветствие телеграмм бота и первоначальная информация о его функциях" + '\n' +
                 "/info - Присылает всю доступную про вас информацию, которая хранится в базе данных" + '\n' +
-                "/command - Выдает все доступные команды и их функции"
+                "/command - Выдает все доступные команды и их функции" + '\n' +
+                '/numbers - Игра, в которой вам предстоит отгадать число от 0 до 9'
             )
         } if (text === "/numbers") {
             const randomNumber = Math.floor(Math.random() * 10)
             chats[chatId] = randomNumber
-            return await bot.sendMessage(chatId,"Отгадайте число от 1 до 9", gameOptions)
+            return await bot.sendMessage(chatId,"Отгадайте число от 0 до 9", gameOptions)
         }
 
     })
